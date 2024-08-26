@@ -164,28 +164,26 @@ header {
     }
 }
 
-/* Keyframes for typing effect */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+.intro-content h1 {
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  border-right: 2px solid;
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0; /* Initial width for typing effect */
+  opacity: 0; /* Hide text initially */
 }
 
-/* Keyframes for blink cursor effect */
+/* Keyframes */
+@keyframes typing {
+  from { width: 0; opacity: 1; }
+  to { width: 100%; opacity: 1; }
+}
+
 @keyframes blink-caret {
   from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
-
-/* Styling for the h1 element */
-.intro-content h1 {
-  font-family: 'Island Moments', sans-serif;
-  font-size: 3rem; /* Adjust size as needed */
-  color: #333; /* Change color if desired */
-  overflow: hidden; /* Ensures the text doesn't overflow */
-  white-space: nowrap; /* Keeps the text on one line */
-  border-right: 2px solid black; /* Cursor effect */
-  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
-  display: inline-block; /* Ensures the border-right cursor is positioned correctly */
+  50% { border-color: Whitesmoke; }
 }
 
 
@@ -245,7 +243,6 @@ header {
 }
 
 .gallery a:hover {
-  transform: scale(1.05);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -460,10 +457,6 @@ h2 {
 .card:hover {
   transform: scale(1.03); /* Slightly larger on hover */
 }
-
-
-
-
 
   /*destination 1 */
   /* Gallery item container for animations and titles */
