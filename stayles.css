@@ -1,0 +1,533 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-image: url('path/to/your/image.jpg'); /* Ganti dengan URL gambar Anda */
+    background-size: cover; /* Mengatur ukuran gambar agar menutupi seluruh elemen */
+    background-position: center; /* Mengatur posisi gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    height: 100vh; /* Menjadikan body setinggi tampilan penuh */
+}
+
+/* Navbar Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 400;
+    font-family: 'Island Moments', cursive;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+/* Button on the Right */
+.nav-button {
+    background-color: #f0a500;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #e08900;
+}
+
+/* Hero Section with Slider */
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.video-section {
+  position: relative;
+  height: 120vh;
+  overflow: hidden;
+  margin-bottom: 10rem;
+}
+
+/* Introduction Section */
+.intro {
+    display: flex;
+    padding: 50px;
+    background-color: #f5f5f5;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.intro-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.intro-content h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.intro-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.intro-images {
+    flex: -2.3;
+    position: relative;
+}
+
+.intro-images img {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 15rem;
+}
+
+.intro-images .image-top {
+    position: relative;
+    top: 250px;
+    max-width: 40%;
+    z-index: 2;
+}
+
+.intro-images .image-bottom {
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .intro-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .intro-images .image-bottom {
+        top: 30px;
+        left: 30px;
+    }
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Keyframes for blink cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+/* Styling for the h1 element */
+.intro-content h1 {
+  font-family: 'Island Moments', sans-serif;
+  font-size: 3rem; /* Adjust size as needed */
+  color: #333; /* Change color if desired */
+  overflow: hidden; /* Ensures the text doesn't overflow */
+  white-space: nowrap; /* Keeps the text on one line */
+  border-right: 2px solid black; /* Cursor effect */
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  display: inline-block; /* Ensures the border-right cursor is positioned correctly */
+}
+
+
+/* Destination Section */
+
+
+/*batik*/
+.gallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; /* Remove padding to eliminate space at top and bottom */
+  background-color: #ffffff;
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.title {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  font-family: 'Island Moments', cursive;
+  font-size: 70px;
+  color: #1a3d6f;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Ensure images are tightly packed */
+  margin-top: -1rem;
+  margin-bottom: 10rem;
+
+}
+.row1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Ensure images are tightly packed */
+  
+}
+
+.gallery a {
+  display: block;
+  border-radius: 0; /* Remove border-radius for a tighter fit */
+  overflow: hidden;
+  margin: 0; /* Remove margin between images */
+}
+
+.gallery img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0; /* Remove margin around images */
+  transition: transform 0.3s ease;
+}
+
+.gallery a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .gallery img {
+      width: 100px;
+      height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+      width: 80px;
+      height: 80px;
+  }
+}
+
+/*Kuliner*/
+  /* General container styling */
+  .container {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Custom product grid styling */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 40px); /* 3 products per row */
+    max-width: 100%; /* Ensure products don't overflow */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.product h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 0;
+    margin: 0;
+    color: #333;
+}
+
+/* Hover effects */
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.modal-body {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .product {
+        margin-bottom: 20px;
+        flex: 1 1 100%; /* 1 product per row on small screens */
+    }
+
+    .product h5 {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+}
+
+/* Modal Styling (if additional customization is needed) */
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal-body {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Other previously provided CSS */
+
+
+
+/*Kesenian*/
+.kesenian-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+}
+
+.kesenian-section h2 {
+  font-size: 2.5em;
+  color: #2f4f4f;
+  margin-bottom: 30px;
+}
+
+.gallery-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.large-card {
+  grid-column: 1 / 2;
+}
+
+.small-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s ease; /* Subtle animation */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the card area */
+  display: block;
+}
+
+.large-card img {
+  width: 100%;
+  height: auto;
+}
+
+.small-cards .card {
+  width: 300px; /* Width of the small cards */
+  height: 300px; /* Height of the small cards */
+  margin: 0 auto;
+}
+
+.card-button {
+  background-color: #2f4f4f;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  text-decoration: none;
+  display: block;
+  border-radius: 0 0 10px 10px;
+  transition: background-color 0.2s ease;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-button:hover {
+  background-color: #556b2f;
+}
+
+.card:hover {
+  transform: scale(1.03); /* Slightly larger on hover */
+}
+
+
+
+
+
+  /*destination 1 */
+  /* Gallery item container for animations and titles */
+  .gallery-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .gallery-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .gallery-column {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .gallery-column {
+      max-width: 100%;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .gallery-image {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .gallery-column:nth-child(1) .gallery-image { animation-delay: 0.1s; }
+  .gallery-column:nth-child(2) .gallery-image { animation-delay: 0.2s; }
+  .gallery-column:nth-child(3) .gallery-image { animation-delay: 0.3s; }
