@@ -622,6 +622,7 @@ h2 {
 
 
 /*dESTINATION*/
+/* Base Styles */
 .kesenian-section {
   text-align: center;
   padding: 40px 20px;
@@ -702,6 +703,85 @@ h2 {
 .card:hover {
   transform: scale(1.03); /* Slightly larger on hover */
 }
+
+/* Responsive Design */
+
+/* Laptops and Desktops */
+@media (min-width: 992px) {
+  .kesenian-section {
+    padding: 50px 30px;
+  }
+
+  .kesenian-section h2 {
+    font-size: 2.3em;
+  }
+
+  .gallery-layout {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .small-cards .card {
+    width: 280px; /* Slightly reduced size for smaller laptops */
+    height: 280px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .kesenian-section {
+    padding: 40px 20px;
+  }
+
+  .kesenian-section h2 {
+    font-size: 2em;
+  }
+
+  .gallery-layout {
+    grid-template-columns: 1fr; /* Single column layout on tablets */
+  }
+
+  .large-card {
+    grid-column: 1 / -1; /* Takes up full width */
+  }
+
+  .small-cards {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  }
+
+  .small-cards .card {
+    width: 100%; /* Full width within its grid column */
+    height: auto; /* Auto height */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  .kesenian-section {
+    padding: 30px 15px;
+  }
+
+  .kesenian-section h2 {
+    font-size: 1.8em;
+  }
+
+  .gallery-layout {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .large-card {
+    grid-column: 1 / -1; /* Takes up full width */
+  }
+
+  .small-cards {
+    grid-template-columns: 1fr; /* Single column layout for small cards */
+  }
+
+  .small-cards .card {
+    width: 100%; /* Full width within its grid column */
+    height: auto; /* Auto height */
+  }
+}
+
 
 
 
